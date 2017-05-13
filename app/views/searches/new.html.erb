@@ -1,0 +1,38 @@
+<h1> Advanced Search</h1>
+
+<div class="eventsearch">
+<%= form_for @search , html: {class: "pure-form"} do |s|%>
+    
+    <div class="field">
+		<%= s.label :time_from %> <br>
+		<%= s.select :searchtime, options_for_select(@searchtimes), :include_blank => true %>
+	</div> <br>
+    
+    <div class="field">
+    	<%= s.label :about %><br/>
+    	<%= s.text_field :about  %>
+    </div>
+    
+    <div class="field">
+    	<%= s.label :performer %><br/>
+    	<%= s.select :performer, options_for_select(@performers), :include_blank => true %>
+    </div>
+    	
+    <div class="field">
+    	<%= s.label :genre %><br/>
+    	<%= s.select :genre, options_for_select(@genres), :include_blank => true, size: "240x6"  %>
+    	</div>
+    	
+    <div class="field">
+    	<%= s.label :place %><br/>
+    	<%= s.select :place, options_for_select(@places), :include_blank => true %>
+    </div>
+    	
+    <div class="actions"><%= s.submit "Search", class: "pure-button pure-button-primary"%></div>
+    	
+    <%end%>
+    	
+    <p><%= link_to 'Back', events_path %></p>
+    	
+    	</div>
+

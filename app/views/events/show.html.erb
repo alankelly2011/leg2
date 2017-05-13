@@ -1,0 +1,64 @@
+<%= render 'layouts/navbar' %>
+
+
+	<div class="container">
+			<div class="eventmaincontainer">
+	            <div class="row">
+	                <div class="col-sm-12 text-center">
+
+					<h1>Showing Event</h1>
+
+						<p id="notice"><%= notice %></p>
+						
+						<p>
+						  <strong>Image:</strong><br>
+						  <%= image_tag @event.image.url, size:"200x200" %>
+						</p>
+						
+						<p>
+						  <strong>Name:</strong>
+						  <%= @event.name %>
+						</p>
+						
+						<p>
+						  <strong>Venue:</strong>
+						  <%= @event.venue_name %>
+						</p>
+						
+						<p>
+						  <strong>Category:</strong>
+						  <%= @event.category %>
+						</p>
+						
+						<p>
+						  <strong>Location:</strong>
+						  <%= @event.location %>
+						</p>
+						
+						<p>
+						  <strong>Time:</strong>
+						  <%= @event.eventtime %>
+						</p>
+						
+						<p>
+						  <strong>Date:</strong>
+						  <%= @event.date %>
+						</p>
+						
+						<p>
+						  <strong>Description:</strong><br>
+						  <%= @event.description %>
+						</p>
+						<p>	
+						<%= link_to 'Edit', edit_event_path(@event) %> |
+						<%= link_to 'Back', events_path %>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		<br>
+			
+			
+						
+						

@@ -1,0 +1,21 @@
+.events-bg{
+  background: url(/border.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+.eventmaincontainer{
+  //background: url(dj/tornpaper.jpg) no-repeat center center fixed; 
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  //background-size: cover;
+  position: relative;
+  margin-top: 10%;
+  padding-bottom: 1.5%;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  text-align: center;
+}
