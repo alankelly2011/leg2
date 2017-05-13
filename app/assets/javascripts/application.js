@@ -11,7 +11,14 @@
 // about supported directives.
 
 
+//= require agency
+//= require bootstrap
+//= require cbpAnimatedHeader
+//= require classie
+//= require contact_me
+//= require core
+//= require events
+//= require jqBootstrapValidation
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require map
+// =require_tree .
