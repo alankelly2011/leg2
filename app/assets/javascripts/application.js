@@ -10,15 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-
-//= require agency
-//= require bootstrap
-//= require cbpAnimatedHeader
-//= require classie
-//= require contact_me
-//= require core
-//= require events
-//= require jqBootstrapValidation
 //= require jquery
-//= require map
-// =require_tree .
+//= require jquery_ujs
+//= require bootstrap
+//= require_tree .

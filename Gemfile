@@ -1,12 +1,19 @@
 source 'https://rubygems.org'
 
-gem 'font-awesome-sass', '~> 4.6.2'
-gem 'bootstrap-sass'
 gem 'rails_admin'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'paperclip', '~> 3.0'
-#gem 'paperclip'
+
+group :assets do
+  gem 'font-awesome-sass', '~> 4.6.2'
+  gem 'bootstrap-sass'
+  gem 'sass-rails', '~> 5.0'
+  gem 'coffee-rails', '~> 4.1.0'
+  gem 'jquery-rails'
+  gem 'uglifier', '>= 1.3.0'
+end
+  
 gem 'rails_12factor', group: :production
 gem 'bootstrap3-datetimepicker-rails'
 gem 'devise'
@@ -15,16 +22,16 @@ gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: [:development]
 gem 'pg'
-gem 'sass-rails', '~> 5.0'
+
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
