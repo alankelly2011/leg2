@@ -192,15 +192,15 @@
 									    <%= s.select :place, options_for_select(@places), {:prompt => ''}, {:style => 'width: 70%'} %>
 								    </div><br>
 								    
-								    <div class="field">
-									    <%= s.label :date, 'Choose a Date' %><br>
-									    <%= s.date_field :date, {:style => 'width: 70%;'}%>
-								    </div><br>
-			    					
-								    <div class="field">
+								     <div class="field">
 								    	<%= s.label :performer, 'Choose Perfomrer' %><br>
 								    	<%= s.select :performer, options_for_select(@performers),{:prompt => ''}, {:style => 'width: 70%;'} %>
-								    </div> <br><br>
+								    </div> <br>
+								    
+								    <div class="field">
+									    <%= s.label :date, 'Choose a Date' %><br>
+									    <%= s.date_field :date, {:min => Date.today, :style => 'width: 70%;'}%>
+								    </div><br> <br>
 								    					    	
 								    	<div class="actions"><%= s.submit "Search", class: "btn btn-xl"%></div>
 								    	
