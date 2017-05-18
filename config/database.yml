@@ -25,4 +25,4 @@ production:
   adapter: postgresql
   database: db/production.sqlite3
   encoding: unicode
-  S3_BUCKET: 'leg1-production'
+ # S3_BUCKET: 'leg1-production'

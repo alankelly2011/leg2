@@ -3,6 +3,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+
 #Paperclip.options[:command_path] = "'/c/WINDOWS/system32/"
 
 # Require the gems listed in Gemfile, including any gems
