@@ -6,8 +6,8 @@ class Event < ActiveRecord::Base
   belongs_to :user
   
   
-  #has_attached_file :image
-  mount_uploader :image, ImageUploader
+  has_attached_file :image, ImageUploader
+ # mount_uploader :image, ImageUploader
    
 end
 
