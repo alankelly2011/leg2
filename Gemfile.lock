@@ -384,7 +384,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  aws-sdk (~> 2.3)
+  aws-sdk
   bootstrap-sass
   bootstrap3-datetimepicker-rails
   byebug
@@ -396,7 +396,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick
-  paperclip (~> 3.0)
+  paperclip
   pg
   rails (= 4.2.5.1)
   rails_12factor
