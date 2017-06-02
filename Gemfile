@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'rails_admin'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'paperclip'#, '~> 3.0'
-gem 'aws-sdk'#, '~> 2.3'
+gem 'paperclip', '~> 4.2.1'#, '~> 3.0'
+gem 'aws-sdk', '< 2.0'#, '~> 2.3'
 
 group :assets do
   gem 'font-awesome-sass', '~> 4.6.2'
