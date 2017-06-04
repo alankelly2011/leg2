@@ -7,6 +7,8 @@ class Event < ActiveRecord::Base
   
   
  has_attached_file :image
+ 
+ s3_region ENV ["aws_region"]
  #mount_uploader :image, ImageUploader
    
 end
