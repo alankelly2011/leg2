@@ -10,7 +10,9 @@ class Event < ActiveRecord::Base
  
  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif", "application/pdf"],
  
- :s3_region => ENV['AWS_REGION']
+ :s3_region => ENV['AWS_REGION'],
+ 
+  :storage => :s3
  #mount_uploader :image, ImageUploader
    
 end
