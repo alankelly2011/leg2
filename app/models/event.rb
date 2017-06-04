@@ -6,9 +6,9 @@ class Event < ActiveRecord::Base
   belongs_to :user
   
   
- has_attached_file :image
+ has_attached_file :image,
  
- s3_region ENV ["aws_region"]
+ :s3_region => ENV['AWS_REGION']
  #mount_uploader :image, ImageUploader
    
 end
