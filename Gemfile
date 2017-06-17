@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails_admin'
-gem 'carrierwave'
+#gem 'carrierwave'
 gem 'mini_magick'
 gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '~> 2'
