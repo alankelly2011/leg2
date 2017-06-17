@@ -1,4 +1,5 @@
 <!-- Navigation -->
+   
     <body id="page-top" class="index">
 
     <!-- Navigation -->
@@ -199,7 +200,7 @@
 								    
 								    <div class="field">
 									    <%= s.label :date, 'Choose a Date' %><br>
-									    <%= s.date_field :date, {:min => Date.today, :style => 'width: 70%;'}%>
+									    <%= s.text_field :date, :style => 'width: 70%;'%>
 								    </div><br> <br>
 								    					    	
 								    	<div class="actions"><%= s.submit "Search", class: "btn btn-xl"%></div>

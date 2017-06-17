@@ -14,7 +14,7 @@ group :assets do
   gem 'jquery-rails'
   gem 'uglifier', '>= 1.3.0'
   gem 'therubyracer'
-  gem 'fog'
+  #gem 'fog'
  
 end
   
