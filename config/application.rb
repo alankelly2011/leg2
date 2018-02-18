@@ -3,6 +3,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+
 #Paperclip.options[:command_path] = "'/c/WINDOWS/system32/"
 
 # Require the gems listed in Gemfile, including any gems
@@ -12,9 +13,7 @@ Bundler.require(*Rails.groups)
 module FinalProject
   class Application < Rails::Application
     
-    config.web_console.whitelisted_ips = '78.19.224.4'
-# or a whole network
-config.web_console.whitelisted_ips = '78.19.224.4'
+    
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
