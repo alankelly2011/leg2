@@ -1,4 +1,5 @@
 // Agency Theme JavaScript
+/* global $ */
 
 (function($) {
     "use strict"; // Start of use strict
@@ -31,3 +32,4 @@
     });
 
 }); // End of use strict
+;

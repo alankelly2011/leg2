@@ -1,22 +1,23 @@
 <!-- Navigation -->
+   <%= javascript_include_tag "application" %>
    
     <body id="page-top" class="index">
-
+<%= javascript_include_tag "application" %>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
+            <div class="navbar-default.affix js-scroll-trigger">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Live Event Guide</a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Live Event Guide</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
+                    <li class="hidden ">
                         <a href="#page-top"></a>
                     </li>
                     
@@ -27,15 +28,15 @@
                     </li>
                     
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="js-scroll-trigger" href="#about">About</a>
                     </li>
                    
                     <li>
-                        <a class="page-scroll" href="#eventfinder">Event Finder</a>
+                        <a class="js-scroll-trigger" href="#eventfinder">Event Finder</a>
                     </li>
                     
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="js-scroll-trigger" href="#contact">Contact</a>
                     </li>
                     <li>
                         <%= link_to "My Events", events_path %>
@@ -48,15 +49,15 @@
                     <% elsif user_signed_in? %>
                     
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="js-scroll-trigger" href="#about">About</a>
                     </li>
                    
                     <li>
-                        <a class="page-scroll" href="#eventfinder">Event Finder</a>
+                        <a class="js-scroll-trigger" href="#eventfinder">Event Finder</a>
                     </li>
                     
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="js-scroll-trigger" href="#contact">Contact</a>
                     </li>
                     <li>
                         <%= link_to "My Events", events_path %>
@@ -69,19 +70,19 @@
                     <%else%>
                     
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="js-scroll-trigger" href="#about">About</a>
                     </li>
                   
                     <li>
-                        <a class="page-scroll" href="#eventfinder">Event Finder</a>
+                        <a class="js-scroll-trigger" href="#eventfinder">Event Finder</a>
                     </li>
                     
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="js-scroll-trigger" href="#contact">Contact</a>
                     </li>
                     
                     <li>
-                        <a class="page-scroll" href="#login">SIGN IN</a>
+                        <a class="js-scroll-trigger" href="#login">SIGN IN</a>
                     </li>
                      <%end%>
                 </ul>
@@ -100,8 +101,8 @@
                 <div class="intro-lead-in">Welcome To YOUR Live Event Guide!</div>
                 <div class="intro-heading">Free to Search<br> Join to Promote</div>
                 
-                <div class="page-scroll btn btn-xl">
-                	<a href="https://sleepy-retreat-41993.herokuapp.com/users/sign_up" class="page-scroll btn btn-xl">Join to Promote<br>(Free)</a>
+                <div class="js-scroll-trigger btn btn-xl">
+                	<a href="https://sleepy-retreat-41993.herokuapp.com/users/sign_up" class="js-scroll-trigger btn btn-xl">Join to Promote<br>(Free)</a>
             	</div>
             </div>
         </div>
@@ -165,7 +166,7 @@
 <!-- About Section -->
 
     <section id="eventfinder">
-        <div class="container">
+        <div class="container" style="height:690px;">
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <h2 class="section-heading">Event Finder</h2>
@@ -200,7 +201,7 @@
 								    
 								    <div class="field">
 									    <%= s.label :date, 'Choose a Date' %><br>
-									    <%= s.text_field :date, :style => 'width: 70%;'%>
+									    <%= s.date_field :date, :style => 'width: 70%;'%>
 								    </div><br> <br>
 								    					    	
 								    	<div class="actions"><%= s.submit "Search", class: "btn btn-xl"%></div>
@@ -262,7 +263,7 @@
     
     <!-- Services Section -->
     <section id="login">
-        <div class="container">
+        <div class="container" style="height:390px;">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">SIGN IN</h2>
@@ -289,7 +290,10 @@
 	
   <!--<script type="text/javascript" src="//blackrockdigital.github.io/startbootstrap-agency/js/agency.min.js"></script>-->
   
-<script type="text/javascript" src="//blackrockdigital.github.io/startbootstrap-agency/js/agency.min.js"></script>
+<!--<script type="text/javascript" src="http://blackrockdigital.github.io/startbootstrap-agency/js/agency.min.js"></script>-->
+<%= javascript_include_tag "application" %>
+
+</body>
     
   
     
