@@ -18,16 +18,17 @@ group :assets do
  
 end
   
-gem 'rails_12factor', group: :production
+
 gem 'bootstrap3-datetimepicker-rails'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', group: [:development]
-gem 'pg'
+#gem 'pg'
 
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
 
