@@ -29,7 +29,7 @@ gem 'sqlite3', group: [:development]
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg',  '~> 1.0.0'
+  gem 'pg',  '~> 0.15'
 end
 
 # Use Uglifier as compressor for JavaScript assets
