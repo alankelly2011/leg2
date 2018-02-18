@@ -270,7 +270,7 @@ DEPENDENCIES
   jquery-rails
   mini_magick
   paperclip!
-  pg
+  pg (~> 1.0.0)
   rails (= 4.2.5.1)
   rails_12factor
   rails_admin

@@ -29,7 +29,7 @@ gem 'rails', '4.2.5.1'
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
+  gem 'pg',  '~> 1.0.0'
 end
 
 # Use Uglifier as compressor for JavaScript assets
