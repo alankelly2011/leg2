@@ -31,7 +31,7 @@ gem 'rails', '4.2.5.1'
 gem 'sqlite3', group: [:development]
 #gem 'pg'
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'figaro'
 group :production do
   gem 'rails_12factor'
   gem 'pg',  '~> 0.15'
