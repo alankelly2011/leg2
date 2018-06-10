@@ -8,17 +8,21 @@ gem 'aws-sdk', '~> 2'
 
 group :assets do
   gem 'font-awesome-sass', '~> 4.6.2'
-  gem 'bootstrap-sass'
+  gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
   gem 'sass-rails', '~> 5.0'
   gem 'coffee-rails', '~> 4.1.0'
-  gem 'jquery-rails'
+  gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
   gem 'uglifier', '>= 1.3.0'
   gem 'therubyracer'
+  gem 'turbolinks'
   #gem 'fog'
+
  
 end
-  
 
+gem 'dotenv-rails', groups: [:development, :test]
+  
+gem 'mail_form'
 gem 'bootstrap3-datetimepicker-rails'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -26,6 +30,7 @@ gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: [:development]
 #gem 'pg'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :production do
   gem 'rails_12factor'
@@ -42,7 +47,6 @@ end
 # Use jquery as the JavaScript library
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   
   root 'welcome#home'
   
+  resources :welcome, only: [:home, :create]
+  
   get "/searches/new" => redirect("/#eventfinder")
  
   devise_for :users, controllers: {registrations: 'registrations'}

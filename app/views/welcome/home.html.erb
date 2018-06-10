@@ -1,8 +1,6 @@
 <!-- Navigation -->
-   <%= javascript_include_tag "application" %>
    
     <body id="page-top" class="index">
-<%= javascript_include_tag "application" %>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
@@ -11,7 +9,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Live Event Guide</a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Kilkenny Live</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -98,12 +96,18 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To YOUR Live Event Guide!</div>
-                <div class="intro-heading">Free to Search<br> Join to Promote</div>
-                
+                <div class="intro-lead-in">Welcome to the 'Kilkenny Live' Event Guide!</div>
+                <h4>Find events based on performer, date or time. You choose!</h4>
+                <br/>
                 <div class="js-scroll-trigger btn btn-xl">
-                	<a href="https://sleepy-retreat-41993.herokuapp.com/users/sign_up" class="js-scroll-trigger btn btn-xl">Join to Promote<br>(Free)</a>
+                	<a class="js-scroll-trigger btn btn-xl" href="#eventfinder">Search Events</a>
             	</div>
+            	<br/>
+            	<br/>
+            	<br/>
+               <!-- <div class="js-scroll-trigger btn btn-xl">
+                	<a href="https://sleepy-retreat-41993.herokuapp.com/users/sign_up" class="js-scroll-trigger btn btn-xl">Join to Promote<br>(Free)</a>
+            	</div>-->
             </div>
         </div>
     </header>
@@ -137,7 +141,7 @@
                         <img src="assets/team/Outdoor Event.jpg" class="img-responsive img-circle" alt="">
                         <h4>Search For Free</h4>
                     </div>
-                    	Here at the Live Event Guide we are all about presenting up to date event information to you free of charge.
+                    	Here at Kilkenny Live we are all about presenting up to date event information to you free of charge.
 	                    Simply use out 'Event Finder' to select your preferences, performer, event type, date, time, pick as few or as
 	                    many as you like and we'll return events that fit your taste and schedule. If you are on holidays, a weekend away, 
 	                    a hen or stag do, not only can you search for events that fit your needs but we also offer directions on our results page
@@ -148,15 +152,14 @@
                 <div class="col-sm-4 text-justify">
                     <div class="team-member">
                         <img src="assets/team/Live Event.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Promotion With Us</h4> 
+                        <h4>We Promote For You</h4> 
                     </div>
-                        Here at the Live Event Guide we offer free promotion for venues and performers alike.
-                        If you are a venue owner or managere you can freely promote your own venue or multiple
-                        venues right here with us under one account. Likewise, if you are a performer you can list of
-                        your performances in various locations and venues for the general public to search and view.
-                        You can also use this service as a way of maintaing your event diary. Once registered, simply
-                        create your event and we'll make sure it's included in our search filters for the general public to find.
-                        Happy promoting! 
+                        Here at the Kilkenny Live we offer to promote for venues and performers alike.
+                        If you are a venue owner or manager and are looking to expand your business and customer base for events then we're here to help.
+                        We can sit down and a discuss your needs and events and then get promoting them for you. We take your information and present it 
+                        in a way that accessible to businesses, local people and the tourism sector to make sure that people passionate about live events 
+                        know what you have on and when. Feel free to get in contact if you require more information.
+                        
                  </div>        
             </div>
         </div>
@@ -224,9 +227,48 @@
                     <h3 class="section-subheading text-muted">Céad Míle Fáilte.</h3>
                 </div>
             </div>
+                        <!--<%= render 'contact_form' %>-->
             <div class="row">
-                <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                 <%= form_for @contact, url: welcome_index_path, :html => {:id => 'foo'}, remote: true do |f| %>
+                  
+                </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <%= f.text_field  :name, :id => "name_input", required: true, class: "form-control", placeholder: "Full Name..." %></br>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%= f.text_field :email, :id => "email_input", required: true, class: "form-control", placeholder: "Your Email Address..."%></br>
+                        </div>
+                        
+                        <div class="col-lg-12 text-center">
+                          <%= f.submit 'Send Message', :id => "form_button", class: 'btn btn-primary', data: { disable_with: "Submitting..."} %>
+                    </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                              <%= f.text_area :message, :id => "message_input", rows: 8, cols: 40, required: true, class: "form-control",
+                                                placeholder: "Place Your Message Here..."%></br>
+                        </div>
+                    </div>
+                    
+                      <div class= "hidden">
+                        <%= f.label :nickname %>
+                        <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+                      </div>
+                      
+              </div>
+      </div>
+            
+
+ <% end %>
+
+<div class="col-md-3" id="flash-message">
+                <%= render 'flash' %>
+            </div>
+            </div>  
+                    <!--<form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -254,15 +296,13 @@
                                 <button type="submit" class="btn btn-xl">Send Message</button>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
+                    </form>-->
         </div>
     </section>
     
     
     <!-- Services Section -->
-    <section id="login">
+   <section id="login">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -291,7 +331,8 @@
   <!--<script type="text/javascript" src="//blackrockdigital.github.io/startbootstrap-agency/js/agency.min.js"></script>-->
   
 <!--<script type="text/javascript" src="http://blackrockdigital.github.io/startbootstrap-agency/js/agency.min.js"></script>-->
-<%= javascript_include_tag "application" %>
+
+  <%= javascript_include_tag "application" %>
 
 </body>
     
