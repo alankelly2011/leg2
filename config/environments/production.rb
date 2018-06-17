@@ -81,15 +81,23 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors= true
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                      587,
-    domain:                 'gmail.com',
-    email_provider_username:  ENV["GMAIL_USERNAME"],
-    email_provider_password: ENV["GMAIL_PASSWORD"],
-    authentication:      'plain',
-    enable_starttls_auto: true  }
+    :enable_starttls_auto => true,
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :authentication => :plain,
+    :domain => 'gmail.com',
+    :user_name => ENV["GMAIL_USERNAME"],
+    :password => ENV["GMAIL_PASSWORD"],
+  }
+
+ config.action_mailer.default_url_options = { :host => 'kilkennylive.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+  
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
