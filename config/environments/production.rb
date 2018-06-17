@@ -84,7 +84,7 @@ config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
-    port:                      25,
+    port:                      587,
     domain:                 'gmail.com',
     email_provider_username:  ENV["GMAIL_USERNAME"],
     email_provider_password: ENV["GMAIL_PASSWORD"],
