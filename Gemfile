@@ -4,7 +4,7 @@ gem 'rails_admin'
 #gem 'carrierwave'
 gem 'mini_magick'
 gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk-s3'
 
 group :assets do
   gem 'font-awesome-sass', '~> 4.6.2'
