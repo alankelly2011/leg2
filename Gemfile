@@ -5,6 +5,7 @@ gem 'rails_admin'
 gem 'mini_magick'
 gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk-s3'
+gem 'whenever'
 
 group :assets do
   gem 'font-awesome-sass', '~> 4.6.2'
