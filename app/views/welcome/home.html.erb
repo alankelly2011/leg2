@@ -98,7 +98,7 @@
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome to the 'Kilkenny Live' Event Guide!</div>
                 <h4>Find events based on performer, date or time. You choose!</h4>
-                <br/>
+                <br/><br/><br/>
                 <div class="js-scroll-trigger btn btn-xl">
                 	<a class="js-scroll-trigger btn btn-xl" href="#eventfinder">Search Events</a>
             	</div>
@@ -204,7 +204,7 @@
 								    
 								    <div class="field">
 									    <%= s.label :date, 'Choose a Date' %><br>
-									    <%= s.text_field :date,:style => 'width: 70%;', placeholder: "dd/mm/yy"%>
+									    <%= s.text_field :date,:style => 'width: 70%;', :readonly => true, placeholder: "dd/mm/yy"%>
 								    </div><br> <br>
 								    					    	
 								    	<div class="actions"><%= s.submit "Search", class: "btn btn-xl"%></div>
