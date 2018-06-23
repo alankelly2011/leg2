@@ -227,11 +227,10 @@
                     <h3 class="section-subheading text-muted">Céad Míle Fáilte.</h3>
                 </div>
             </div>
-                        <!--<%= render 'contact_form' %>-->
+
             <div class="row">
                  <%= form_for @contact, url: welcome_index_path, :html => {:id => 'foo'}, remote: true do |f| %>
-                  
-                </div>
+                  <br/><br/>
                     <div class="col-md-6">
                         <div class="form-group">
                             <%= f.text_field  :name, :id => "name_input", required: true, class: "form-control", placeholder: "Full Name..." %></br>
@@ -240,10 +239,6 @@
                         <div class="form-group">
                             <%= f.text_field :email, :id => "email_input", required: true, class: "form-control", placeholder: "Your Email Address..."%></br>
                         </div>
-                        
-                        <div class="col-lg-12 text-center">
-                          <%= f.submit 'Send Message', :id => "form_button", class: 'btn btn-primary', data: { disable_with: "Submitting..."} %>
-                    </div>
                     </div>
                     
                     <div class="col-md-6">
@@ -258,16 +253,21 @@
                         <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
                       </div>
                       
+                      <div class="col-md-12">
+                          <div class="col-lg-12 text-center">
+                                  <%= f.submit 'Send Message', :id => "form_button", class: 'btn btn-primary', data: { disable_with: "Submitting..."} %>
+                            </div>
+                            <div class="col-md-12" id="flash-message">
+                                <%= render 'flash' %>
+                            </div>
+                      </div>
+                      
+                      <% end %>
               </div>
       </div>
             
 
- <% end %>
-
-<div class="col-md-3" id="flash-message">
-                <%= render 'flash' %>
-            </div>
-            </div>  
+ 
                     <!--<form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-md-6">
