@@ -1,5 +1,5 @@
 # Use this file to easily define all of your cron jobs.
-every 1.day, at: '12:30pm' do
+every 1.days, at: '12:43pm' do
   rake 'lib/tasks/events.rake'
 end
 # It's helpful, but not entirely necessary to understand cron before proceeding.
